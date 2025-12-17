@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_user_details"
+        android:title="User Details"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_change_name"
+        android:title="Change Name"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Disconnect &amp; Logout"
+        app:showAsAction="never"/>
+</menu>
