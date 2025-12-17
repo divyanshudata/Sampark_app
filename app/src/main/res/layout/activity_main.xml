@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="LocalNet Mesh"
+            android:text="Sampark"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#075E54"/>

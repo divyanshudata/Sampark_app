@@ -450,13 +450,17 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// 🔴 MESSAGE ADAPTER CLASS (ADD THIS AT THE BOTTOM OF THE FILE, OUTSIDE MainActivity)
+// 🔴 REPLACE THE MESSAGE ADAPTER AT THE BOTTOM OF MainActivity.kt
 class MessageAdapter(private val messages: List<Message>) : RecyclerView.Adapter<MessageAdapter.MessageViewHolder>() {
 
     class MessageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        // Received Views
         val layoutReceived: LinearLayout = view.findViewById(R.id.layoutReceived)
+        val txtReceivedSender: TextView = view.findViewById(R.id.txtReceivedSender)
         val txtReceivedBody: TextView = view.findViewById(R.id.txtReceivedBody)
         val txtReceivedTime: TextView = view.findViewById(R.id.txtReceivedTime)
+
+        // Sent Views
         val layoutSent: LinearLayout = view.findViewById(R.id.layoutSent)
         val txtSentBody: TextView = view.findViewById(R.id.txtSentBody)
         val txtSentTime: TextView = view.findViewById(R.id.txtSentTime)
@@ -469,19 +473,24 @@ class MessageAdapter(private val messages: List<Message>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val message = messages[position]
+
         if (message.isMine) {
-            // Show SENT layout
+            // --- SHOW SENT BUBBLE (RIGHT) ---
             holder.layoutSent.visibility = View.VISIBLE
             holder.layoutReceived.visibility = View.GONE
+
             holder.txtSentBody.text = message.text
             holder.txtSentTime.text = message.timestamp
         } else {
-            // Show RECEIVED layout
+            // --- SHOW RECEIVED BUBBLE (LEFT) ---
             holder.layoutReceived.visibility = View.VISIBLE
             holder.layoutSent.visibility = View.GONE
-            // Add sender name to received message
-            holder.txtReceivedBody.text = "${message.senderName}:\n${message.text}"
+
+            holder.txtReceivedSender.text = message.senderName
+            holder.txtReceivedBody.text = message.text
             holder.txtReceivedTime.text = message.timestamp
+
+            // Optional: Pick random colors for sender names if you want later
         }
     }
 

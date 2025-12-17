@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingVertical="4dp"
@@ -13,17 +12,27 @@
         android:layout_alignParentStart="true"
         android:background="@drawable/bg_message_received"
         android:orientation="vertical"
-        android:padding="8dp"
         android:maxWidth="280dp"
         android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtReceivedSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sender Name"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:textSize="12sp"
+            android:visibility="visible"/>
 
         <TextView
             android:id="@+id/txtReceivedBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is a received message."
+            android:text="Message text goes here"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"/>
 
         <TextView
             android:id="@+id/txtReceivedTime"
@@ -31,9 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="10:30 pm"
-            android:textColor="#666666"
-            android:textSize="12sp"
-            android:paddingTop="4dp"/>
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -43,17 +52,15 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/bg_message_sent"
         android:orientation="vertical"
-        android:padding="8dp"
         android:maxWidth="280dp"
-        android:visibility="gone"
-        tools:visibility="visible">
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/txtSentBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is a sent message."
-            android:textColor="#FFFFFF"
+            android:text="Message text"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
@@ -62,9 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="10:31 pm"
-            android:textColor="#E0E0E0"
-            android:textSize="12sp"
-            android:paddingTop="4dp"/>
+            android:textColor="#555555"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp"/>
     </LinearLayout>
 
 </RelativeLayout>
