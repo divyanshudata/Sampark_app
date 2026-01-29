@@ -43,38 +43,41 @@
             android:id="@+id/tabChatLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/chat_watermark_bg"
             android:orientation="vertical"
-            android:visibility="visible"
-            android:background="#E5DDD5">
+            android:visibility="visible">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/globalChatRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:padding="8dp"
-                android:clipToPadding="false"/>
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:padding="8dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:background="#FFFFFF">
+                android:padding="5dp">
+
                 <EditText
                     android:id="@+id/inputMessage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:hint="Broadcast Message..."
-                    android:padding="10dp"
-                    android:background="@android:color/transparent"/>
+                    android:padding="10dp" />
+
                 <Button
                     android:id="@+id/btnSend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Send"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical"
+                    android:text="Send" />
             </LinearLayout>
         </LinearLayout>
 
@@ -103,37 +106,39 @@
             android:id="@+id/layoutPrivateChat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:visibility="gone"
-            android:background="#E5DDD5"
+            android:background="@drawable/chat_watermark_bg"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="#075E54"
-                android:padding="15dp"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
                 <Button
                     android:id="@+id/btnBackFromPrivate"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:text="←"
-                    android:textSize="20sp"
-                    android:textColor="#FFFFFF"
                     android:backgroundTint="#00000000"
-                    android:padding="0dp"/>
+                    android:padding="0dp"
+                    android:text="←"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
                 <TextView
                     android:id="@+id/txtPrivateChatName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="Chat Name"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="10dp"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -141,36 +146,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:padding="8dp"
-                android:clipToPadding="false"/>
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:padding="8dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="5dp"
                 android:background="#FFFFFF"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
                 <Button
                     android:id="@+id/btnPrivatePhoto"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:text="+"
+                    android:layout_marginEnd="5dp"
                     android:backgroundTint="#FF9800"
-                    android:layout_marginEnd="5dp"/>
+                    android:text="+" />
+
                 <EditText
                     android:id="@+id/inputPrivateMessage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@android:color/transparent"
                     android:hint="Type private message..."
-                    android:padding="10dp"
-                    android:background="@android:color/transparent"/>
+                    android:padding="10dp" />
+
                 <Button
                     android:id="@+id/btnPrivateSend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Send"/>
+                    android:text="Send" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
