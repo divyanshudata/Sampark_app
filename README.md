@@ -110,7 +110,7 @@ This project was developed during the **HackXSprint Hackathon** through the coll
 | Member | GitHub |
 |---------|--------|
 | **Yash Vinay Kalyani** | https://github.com/Yash4305d-y |
-| **Ayush** | https://github.com/kyush02 |
+| **Kyush** | https://github.com/kyush02 |
 | **Divyanshu** | https://github.com/divyanshudata |
 | **Aditya** | https://github.com/Adi-og004 |
 
